@@ -1,14 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import SplitPane from './components/SplitPane';
+import Contacts from './components/Contacts';
+import Chat from './components/Chat';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Go to work man</h1>
-      </header>
-    </div>
+    <SplitPane
+      left={
+        <Contacts />
+      }
+        right={
+        <Chat />
+      }/>
   );
 }
 
